@@ -20,7 +20,7 @@ export default function Category() {
   }, []);
 
   const fetchCategory = async () => {
-    const response = await fetch('http://localhost:5000/categories');
+    const response = await fetch('https://swiggy-dummy-api.onrender.com/categories');
     const data = await response.json();
     setCategory(data);
   };
@@ -79,7 +79,7 @@ export default function Category() {
               className='w-[100px] shrink-0 p-2 text-center'
             >
               <img
-                src={`http://localhost:5000/images/${cat.image}`}
+                src={`https://swiggy-dummy-api.onrender.com/images/${cat.image}`}
                 alt={cat.name}
                 className='w-full h-[100px] object-cover rounded'
               />

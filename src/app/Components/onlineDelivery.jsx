@@ -6,7 +6,7 @@ const OnlineDelivery = () => {
   const [data, setData] = useState([]);
 
   const fetchTopRestaurant = async () => {
-    const response = await fetch('http://localhost:5000/top-restaurant-chains');
+    const response = await fetch('https://swiggy-dummy-api.onrender.com/top-restaurant-chains');
     const result = await response.json();
     setData(result);
   };
